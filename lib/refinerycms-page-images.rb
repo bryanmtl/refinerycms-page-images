@@ -9,6 +9,7 @@ module Refinery
 
       refinery.after_inclusion do
         Page.send :has_many_page_images
+        Listing.send :has_many_page_images
 
         BlogPost rescue NameError #this is the ugliest thing ever. Need to reference BlogPost so it autoloads and then we check for it
         
